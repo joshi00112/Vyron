@@ -1,0 +1,3 @@
+package com.vyron.assistant;
+import android.app.Notification;import android.os.Bundle;import android.service.notification.*;
+public class VyronNotificationListener extends NotificationListenerService{public static volatile String latestText="";public void onNotificationPosted(StatusBarNotification s){if(s==null||s.getNotification()==null)return;Bundle b=s.getNotification().extras;if(b==null)return;CharSequence t=b.getCharSequence(Notification.EXTRA_TITLE),x=b.getCharSequence(Notification.EXTRA_BIG_TEXT);if(x==null)x=b.getCharSequence(Notification.EXTRA_TEXT);StringBuilder z=new StringBuilder();if(t!=null)z.append(t);if(x!=null){if(z.length()>0)z.append(": ");z.append(x);}if(z.length()>0)latestText=z.toString();}}

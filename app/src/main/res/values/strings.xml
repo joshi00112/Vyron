@@ -1,4 +1,1 @@
-<resources>
-    <string name="app_name">VYRON</string>
-    <string name="accessibility_description">Allows VYRON to inspect accessible screen labels and perform user-requested interactions. Enable only if you understand and want this capability.</string>
-</resources>
+<resources><string name="app_name">VYRON</string><string name="accessibility_description">Allows VYRON to perform screen actions explicitly requested by you, such as scrolling and going back.</string></resources>
